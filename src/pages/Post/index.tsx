@@ -76,7 +76,6 @@ export const PostUnique = () => {
                       style={duotoneDark}
                       language={match[1]}
                       PreTag="div"
-                      // {...props}
                     />
                   ) : (
                     <code className={className} {...props}>
