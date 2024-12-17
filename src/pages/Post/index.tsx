@@ -6,6 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { createdAtFormatted } from "@/lib/formatter";
 import Markdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
 import {duotoneDark, } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const PostUnique = () => {
@@ -67,7 +68,7 @@ export const PostUnique = () => {
             <Markdown
               children={post.body}
               components={{
-                code({node,  className, children, ...props}) {
+                code({node,  className, children, style, ...props}) {
                   const match = /language-(\w+)/.exec(className || '')
                   return  match ? (
                     <SyntaxHighlighter
@@ -75,7 +76,7 @@ export const PostUnique = () => {
                       style={duotoneDark}
                       language={match[1]}
                       PreTag="div"
-                      {...props}
+                      // {...props}
                     />
                   ) : (
                     <code className={className} {...props}>
