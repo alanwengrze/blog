@@ -14,11 +14,11 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className="max-w-3xl mx-auto -mt-24">
+    <div className="max-w-3xl mx-auto -mt-24 p-4">
       <Profile 
       />
       <Search />
-      <div className="grid grid-flow-col-dense grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {
           posts.length > 0 &&
           posts.map((post) => {

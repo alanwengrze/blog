@@ -30,7 +30,7 @@ export const PostUnique = () => {
     <>
     {
       post.number === Number(id) && (
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto p-4">
           <Card className="-mt-20">
             <CardHeader className="flex flex-row items-center justify-between">
               <button 
