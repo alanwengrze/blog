@@ -123,7 +123,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  .noise {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url('/noise.svg');
+  }
+
+  .noiseStrong {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url('/noise-strong.svg');
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-transparent text-foreground;
   }
 }
